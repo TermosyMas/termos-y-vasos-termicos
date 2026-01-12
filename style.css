@@ -1,0 +1,241 @@
+/* RESET GENERAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ESTILOS BASE */
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  background: #000;
+  color: white;
+  padding: 50px 20px 55px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.6px;
+}
+
+header p {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* INTRO */
+.intro {
+  text-align: center;
+  padding: 90px 20px 80px;
+}
+
+.intro h2 {
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.intro p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 25px 100px;
+}
+
+/* TARJETAS (PRODUCTOS) */
+.card {
+  background: #fff;
+  padding: 60px 40px; /* aire interno */
+  margin-bottom: 100px; /* separación clara entre productos */
+  text-align: center;
+  border-radius: 8px; /* bordes suaves */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* sombra suave */
+}
+
+.card h2 {
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+}
+
+/* FILA FLEX */
+.flex-row {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+/* BLOQUE DE IMAGEN */
+.image-block {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* IMÁGENES GRANDES (PRIMERAS DEL TERMO Y VASO) */
+.card:first-of-type .image-block,
+.card:nth-of-type(2) .image-block {
+  max-width: 380px;
+}
+
+.card:first-of-type img,
+.card:nth-of-type(2) img {
+  max-height: 280px;
+}
+
+/* IMÁGENES JUNTAS */
+.flex-row .image-block {
+  max-width: 280px;
+  flex: 1 1 250px;
+}
+
+.flex-row .image-block img {
+  max-height: 250px;
+}
+
+/* TEXTO DESCRIPTIVO */
+.overlay-text {
+  background: #f7f7f7;
+  border-left: 4px solid #000;
+  padding: 18px 20px;
+  margin-top: 25px;
+  border-radius: 6px;
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* PRECIO */
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #000;
+}
+
+/* TEXTO GENERAL */
+.card p {
+  margin: 40px auto;
+  line-height: 1.8;
+  font-size: 14.8px;
+  max-width: 780px;
+  color: #444;
+}
+
+/* LISTA DE BENEFICIOS */
+.options {
+  list-style: none;
+  margin-top: 40px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.options li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 18px;
+  font-size: 14.5px;
+}
+
+.options li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #000;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f0f0f0;
+  color: #555;
+  font-size: 14px;
+}
+
+/* BOTÓN WHATSAPP FIJO */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-button a {
+  display: inline-block;
+  background-color: #25d366; /* verde WhatsApp */
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 15px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-button a:hover {
+  background-color: #1da851; /* verde más oscuro al pasar mouse */
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  .intro {
+    padding: 60px 20px;
+  }
+
+  .intro h2 {
+    font-size: 1.45rem;
+  }
+
+  .card {
+    padding: 50px 20px;
+    margin-bottom: 60px;
+  }
+
+  .flex-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .overlay-text {
+    font-size: 14px;
+  }
+
+  .whatsapp-button a {
+    font-size: 1.4rem; /* más visible en móvil */
+    padding: 18px 28px;
+  }
+}
